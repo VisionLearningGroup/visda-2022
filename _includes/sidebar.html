@@ -1,0 +1,99 @@
+<!-- Use icons from fontawesome when you are adding new item in the contact list  -->             
+                
+     <div class="sidebar-wrapper">
+            <div class="profile-container">
+                <img class="profile-img" src="{{site.baseurl}}/assets/images/{% if site.pic %}{{ site.pic }}{% else %}profile.png{% endif %}" alt="profile picture" />
+                <h1 class="name">{{site.name}}</h1>
+                <h3 class="tagline">{{site.tagline}}</h3>
+            </div><!--//profile-container-->
+
+            <div class="education-container container-block" id="dates">
+                <h2 class="container-block-title">Important Dates</h2>
+
+                <div class="item">
+                    <h4 class="degree">Registration starts</h4>
+                    <h5 class="meta">June 1st</h5>
+                </div>
+              
+              <div class="item">
+                    <h4 class="degree">Training data released</h4>
+                    <h5 class="meta">June 23rd</h5>
+              </div>
+              <div class="item">
+                    <h5 class="degree">Test datasets released</h5>
+                    <h5 class="meta">Sept 30st</h5>
+              </div>
+                            
+              <div class="item">
+                    <h4 class="degree">Final submission</h4>
+                    <h5 class="meta">Oct 10th, 11:59 am EST</h5>
+              </div>
+
+              <div class="item">
+                    <h4 class="degree">Live session</h4>
+                    <h5 class="meta">Dec 7th, 3:00pm EST</h5>
+              </div>
+              
+            </div>
+       
+            <div class="education-container container-block" style="background: rgba(0, 0, 50, 0.3);" id='reg'>
+                
+                <h2 class="container-block-title">Registration</h2>
+              <p> Please join the <a href="https://groups.google.com/forum/#!forum/visda-2021-participants">[mailing list]</a> for updates. </p>
+<!--                 <form method="POST" action="https://formspree.io/usmn@bu.edu">
+                  <div class="form-group">
+                    <label>Team Name</label>
+                    <input type="text" class="form-control" name="name" placeholder="Team Name" />
+                  </div>
+                  <div class="form-group">
+                    <label>Email address</label>
+                    <input type="email" class="form-control" name="email" placeholder="Email" />
+                  </div>
+                  <div class="form-group">
+                    <label>Affiliation</label>
+                    <input type="text" class="form-control" name="aff" placeholder="Affiliation" />
+                  </div>
+                  <input type="hidden" name="_format" value="plain" />
+                  <input type="text" name="_gotcha" style="display:none" />
+                  <input type="hidden" name="_next" value="https://groups.google.com/forum/#!forum/visda-2021-participants" />
+                  <button type="submit" class="btn btn-default">Submit</button>
+
+                </form> -->
+
+            </div>
+           
+            
+            <div class="education-container container-block">
+                
+                <h2 class="container-block-title">Quick Links</h2>
+              
+                <div class="item">
+                    <h4 class="degree"><a href = "https://github.com/VisionLearningGroup/visda21-dev">Github Repository</a></h4>
+                    <h5 class = "meta">Datasets and Starting Code</h5>
+                </div>
+              
+                <div class="item">
+                    <h4 class="degree"><a href="https://competitions.codalab.org/competitions/33396">CodaLab</a></h4>
+                    <h5 class = "meta">Evaluation Server</h5>
+                </div>  
+              
+              <div class="item">
+                <h4 class="degree"><a href = "https://groups.google.com/forum/#!forum/visda-2021-participants">Mailing List</a></h4>
+                <h5 class="meta">Join for Email Updates </h5>
+              </div>
+              
+               
+            </div>
+
+            <div class="profile-container">
+
+                <h2 class="container-block-title">Contact the Organizers</h2>
+                <ul class="list-unstyled contact-list">
+
+                    <li class="email"><i class="fa fa-envelope"></i><a href="mailto: visda-organizers@googlegroups.com">visda-organizers@googlegroups.com</a></li>
+
+                </ul>
+            </div><!--//contact-container-->
+        
+            
+        </div><!--//sidebar-wrapper-->
