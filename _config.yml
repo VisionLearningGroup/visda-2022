@@ -23,3 +23,5 @@ tagline: NeurIPS2021 Workshop Challenge
 # Tracker
 # analytics: UA-83979019-1
 # Update all the sections by editing the files inside _includes folder.
+
+theme: jekyll-theme-minimal
