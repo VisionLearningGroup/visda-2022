@@ -16,7 +16,7 @@ baseurl: '/visda-2022' #change it according to your repository name
 
 #Profile information
 name: Domain Adaptation
-tagline: NeurIPS2021 Workshop Challenge
+tagline: NeurIPS2022 Workshop Challenge
 # pic: profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
 
