@@ -63,16 +63,13 @@ class RunningmIoU(RunningMetric):
         super(RunningmIoU, self).update(ground_truth, prediction)
         if (ground_truth == self.ignore_label).all():
             return
-        
         current_confusion_matrix = confusion_matrix(y_true=ground_truth,
                                                     y_pred=prediction,
                                                     labels=self.labels)
         
         if self.overall_confusion_matrix is not None:
-            
             self.overall_confusion_matrix += current_confusion_matrix
         else:
-            
             self.overall_confusion_matrix = current_confusion_matrix
     
     def result(self):

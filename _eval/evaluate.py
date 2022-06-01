@@ -5,6 +5,7 @@ import zipfile
 import imageio
 import metrics
 from pathlib import Path
+import shutil
 
 
 opj = os.path.join
@@ -61,7 +62,8 @@ def evaluate(
             kwargs['submission_metadata']["id"],
             phase_codename, 
             kwargs['submission_metadata']["submitted_at"]))
-    temp_gt_dir = os.path.join(TEMP_ROOT,  "gt")
+    rand_id = np.random.randint(0, 10000)
+    temp_gt_dir = os.path.join(TEMP_ROOT,  "gt_%05d" % rand_id)
     unzip_to_folder(test_annotation_file, temp_gt_dir)
     unzip_to_folder(user_submission_file, temp_pred_dir)
     assert np.all([x in os.listdir(temp_gt_dir) for x in ["val", "test"]])
@@ -108,11 +110,13 @@ def evaluate(
     print("Evaluating for %s phase" % phase_codename)
     output["result"] = [
         {
-          "%s_source_only" % phase_codename: {x: pred_metrics["source_only"][x].result() for x in pred_metrics["source_only"]},
-          "%s_uda" % phase_codename: {x: pred_metrics["uda"][x].result() for x in pred_metrics["uda"]},
+          "%s_source_only" % phase_codename: {
+            x: pred_metrics["source_only"][x].result() for x in pred_metrics["source_only"]},
+          "%s_uda" % phase_codename: {
+            x: pred_metrics["uda"][x].result() for x in pred_metrics["uda"]},
         }
     ]
     # To display the results in the result file
     print("Completed evaluation for %s Phase" % phase_codename)
-
+    shutil.rmtree(temp_gt_dir)
     return output
